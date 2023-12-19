@@ -7,28 +7,37 @@
     <title>Calculator</title>
 </head>
 <body>
-    <input type="">
+    <input type="text" class="calculation-box" value="" disabled>
 
-    <button value="">+</button>
-    <button value="">-</button>
-    <button value="">&times;</button>
-    <button value="">&divide;</button>
+    <div class="calc-keys">
 
-    <button value="1" id="1">1</button>
-    <button value="2" id="2">2</button>
-    <button value="3" id="3">3</button>
-    <button value="4" id="4">4</button>
-    <button value="5" id="5">5</button>
-    <button value="6" id="6">6</button>
-    <button value="7" id="7">7</button>
-    <button value="8" id="8">8</button>
-    <button value="9" id="9">9</button>
-    <button value="0" id="9">0</button>
+        <button type="button" value="1">1</button>
+        <button type="button" value="2">2</button>
+        <button type="button" value="3">3</button>
+        
+        <button type="button" class="operator" value="+">+</button>
 
-    <button value="" id="decimal">.</button>
-    <button value="" id="clear">AC</button>
+        <button type="button" value="4">4</button>
+        <button type="button" value="5">5</button>
+        <button type="button" value="6">6</button>
 
-    <button>=</button>
+        <button type="button" class="operator" value="-">-</button>
+
+        <button type="button" value="7">7</button>
+        <button type="button" value="9">9</button>
+        <button type="button" value="8">8</button>
+        
+        <button type="button" class="operator" value="/">&divide;</button>
+        
+        <button type="button" value="0">0</button>
+
+        <button type="button" value="." class="decimal">.</button>
+        <button type="button" value="clear" class="clear">AC</button>
+        <button type="button" class="operator" value="*">&times;</button>
+
+
+        <button type="button" value="equals" class="equals">=</button>
+    </div>  
     
 
 
