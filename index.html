@@ -7,32 +7,32 @@
     <title>Calculator</title>
 </head>
 <body>
-    <input type="text" class="calculation-box" value="" disabled>
+    <input type="text" id="calculation-box" readonly>
 
     <div class="calc-keys">
 
-        <button type="button" value="1">1</button>
-        <button type="button" value="2">2</button>
-        <button type="button" value="3">3</button>
+        <button onclick="display('1')" type="button" value="1" class="digits">1</button>
+        <button onclick="display('2')" type="button" value="2" class="digits">2</button>
+        <button onclick="display('3')" type="button" value="3" class="digits">3</button>
         
         <button type="button" class="operator" value="+">+</button>
 
-        <button type="button" value="4">4</button>
-        <button type="button" value="5">5</button>
-        <button type="button" value="6">6</button>
+        <button onclick="display('4')" type="button" value="4" class="digits">4</button>
+        <button onclick="display('5')" type="button" value="5" class="digits">5</button>
+        <button onclick="display('6')" type="button" value="6" class="digits">6</button>
 
         <button type="button" class="operator" value="-">-</button>
 
-        <button type="button" value="7">7</button>
-        <button type="button" value="9">9</button>
-        <button type="button" value="8">8</button>
+        <button onclick="display('7')" type="button" value="7" class="digits">7</button>
+        <button onclick="display('8')" type="button" value="9" class="digits">9</button>
+        <button onclick="display('9')" type="button" value="8" class="digits">8</button>
         
         <button type="button" class="operator" value="/">&divide;</button>
         
         <button type="button" value="0">0</button>
 
-        <button type="button" value="." class="decimal">.</button>
-        <button type="button" value="clear" class="clear">AC</button>
+        <button onclick="display('1')" type="button" value="." class="decimal">.</button>
+        <button onclick="clear()"type="button" value="clear" class="clear">AC</button>
         <button type="button" class="operator" value="*">&times;</button>
 
 
