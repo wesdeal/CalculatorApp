@@ -1,18 +1,36 @@
 let runningTotal = 0;
+let firstNumber = null;
+let currentNumber = null;
+let currentOperator = null; 
 const screen = document.getElementById('screen');
-let num = document.getElementsByClassName('.digits');
+//let num = document.getElementsByClassName('.digits');
 
+function updateDisplay() {
+    screen.value = currentNumber !== null ? currentNumber : firstNumber !== null ? firstNumber : '0';
+}
 
 function numInput(num) {
     if (isNaN(num)) {
-            
+        handleOperator(num);
+    } else {
+        handleNumber(num);
     }
 }
 
-function handleOperator() {
-    
+function handleNumber(num) {
+    if (currentNumber === null) {
+        currentNumber = num;
+    } else {
+        currentNumber += num;
+    }
+    updateDisplay();
 }
 
+function handleOperator() {
+    if (currentNumber === null) {
+
+    }
+}
 
 function math(operation) {
     if (operation === "+") { // addition
@@ -26,13 +44,29 @@ function math(operation) {
     } else {
         return;
     }
- 
 }
 
+
 function main() {
+    const digits = document.querySelectorAll('.digits');
+    digits.forEach(digit => {
+        digit.addEventListener('click', () => {
+            numInput(parseInt(digit.value));
+        });
+    });
+
+    
     
 }
-    
+
+function numInput(num) {
+    if (isNaN(num)) {
+        handleOperator(num);
+    } else {
+        handleNumber(num);
+    }
+}
+
 main();
 
 
