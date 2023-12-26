@@ -1,49 +1,45 @@
-let operationCalled = false;
-
-let digit = document.querySelectorAll('.digits');
-digit.forEach(button => {
-    button.addEventListener('click', function() {
-        display(button.value);
-    });
-});
+let runningTotal = 0;
+const screen = document.getElementById('screen');
+let num = document.getElementsByClassName('.digits');
 
 
-function display(num) {
-    document.getElementById("calculation-box").value += num;
-}
-
-function clear() {
-    document.getElementById('calculation-box').value = '';
-}
-
-function operation(operator) {
-    operationCalled = true;
-    //switch case
-    switch (operator) {
-        case "+":
+function numInput(num) {
+    if (isNaN(num)) {
             
-        case "-":
-            break;
-        case "*":
-            break;
-        case "/":
-            break;
     }
 }
 
-function input(num) {
-    //displays first number typed
-    if (!operationCalled) {
-        display(num)
+function handleOperator() {
+    
+}
+
+
+function math(operation) {
+    if (operation === "+") { // addition
+
+    } else if (operation === "-") { // subtraction
+
+    } else if (operation === "*") { // multiplication
+
+    } else if (operation === "/") { // division
+
+    } else {
+        return;
     }
-    //once operator is clicked, wait for second num,
-    //once second num is inputed() (use input func again) clear display first and perform calculation
+ 
 }
 
-function calculation() {
-
+function main() {
+    
 }
+    
+main();
+
+
+
 
 
 //things to fix later on,
 // do not allow user to type more than one decimal point
+
+//needs to be some kind of pass on between numbers. second num always becomes first num after they are calculated to keep it going.

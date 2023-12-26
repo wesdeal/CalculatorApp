@@ -7,7 +7,7 @@
     <title>Calculator</title>
 </head>
 <body>
-    <input type="text" id="calculation-box" readonly>
+    <input type="text" id="screen" readonly>
 
     <div class="calc-keys">
 
@@ -32,11 +32,11 @@
         <button type="button" value="0">0</button>
 
         <button onclick="input('.')" type="button" value="." class="decimal">.</button>
-        <button onclick="clear()" type="button" value="clear" class="clear">AC</button>
+        <button type="button" value="clear" class="clear">AC</button>
         <button type="button" class="operator" value="*">&times;</button>
 
 
-        <button type="button" value="equals" class="equals">=</button>
+        <button onclick="equal(num1, num2)" type="button" value="equals" class="equals">=</button>
     </div>  
     
 
